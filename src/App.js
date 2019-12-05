@@ -1,14 +1,16 @@
 import React from 'react';
 import Practice from './components/Practice.jsx';
-import Notes from './components/Notes.jsx';
+//import Notes from './components/Notes.jsx';
 
 function App() {
   return (
     <div className="App" style={{padding: '2vw'}}>
       
-      <Practice />
-      
-      <Notes />
+      <Practice
+        //textSize="big"
+        age = {5}
+      />
+
       
     </div>
   );

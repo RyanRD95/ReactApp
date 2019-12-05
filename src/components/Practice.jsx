@@ -1,7 +1,10 @@
 import React from 'react';
 import '../css/Practice.css';
 
-const Practice = () => {
+const Practice = (props) => {
+
+  console.log(props);
+
   const secondColor = {
     color: 'blue'
   }
@@ -29,16 +32,20 @@ const Practice = () => {
       price: 11.46
     }
   ];
-  
+
+  const bigCss = {fontSize: '3em'}
+  const smallCss = {fontSize: '1.2em'}
+
   return (
     <div className="practice">
-      I'm the <span style={{color: 'green'}}>practice</span> <span style={secondColor}>component</span>
-      
+      <div style={(props.textSize && props.textSize.toLowerCase() === "big") ? bigCss : smallCss}>
+        I'm the <span style={{color: 'green'}}>practice</span> <span style={secondColor}>component</span>
+      </div>
       {/* List of book titles and prices */}
       <ul>
         {
           books.map(book => {
-            return <li>{book.title}: €{book.price}</li>
+            return <li key={book.title}> {book.title}: €{book.price}</li>
           })
         }
       </ul>
