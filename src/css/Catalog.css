@@ -8,3 +8,9 @@
     max-width: 300px;
     padding-top: 50px;
 }
+
+.catalog .book .price {
+    color: red;
+    font-size: 1.3em;
+    margin-top: -10px;
+}

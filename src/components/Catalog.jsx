@@ -45,7 +45,13 @@ class Catalog  extends React.Component {
                     <div
                         className="book"
                         key={book.title}>
-                  {book.title}: €{book.price}
+                      <img src={book.amazonImage} width="50%" alt = {book.title} />
+                      <p>
+                        <strong>{book.title} </strong><br />
+                        by {book.author}
+                      </p>
+                      <p className="price"> ${book.price}</p>
+
                 </div>
                 );
               })
